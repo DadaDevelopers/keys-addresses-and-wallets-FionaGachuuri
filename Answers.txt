@@ -1,0 +1,11 @@
+1. Difference between hardened and non hardened keys:
+Hardened keys are derived in a way that prevents anyone with access to a child private key
+and the parent public key from being able to calculate the parent private key.
+Non hardened keys, on the other hand, allow the parent public key and child private key to be used to compute the
+parent private key, which can be a security risk if one of them is exposed.
+
+2. Why wallet developers prefer deterministic wallets over non deterministic wallets:
+Wallet developers prefer deterministic wallets because they can generate all keys
+and addresses from a single seed phrase which makes backup, recovery, and management much simpler.
+In non deterministic wallets, each key is generated randomly and stored individually,
+which makes backups harder and recovery nearly impossible if keys are lost.
